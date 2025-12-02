@@ -1,0 +1,127 @@
+/* КНОПКА */
+.button{
+   padding: 16px 20px;
+   font-size: 18px;
+   line-height: 1.2;
+   border-radius: 100px;
+   border: 1px solid var(--text-primary);
+   color: var(--text-primary);
+   display: inline-flex;
+   justify-content: center;
+   align-items: center;
+   gap: 10px;
+   transition: all 0.3s;
+}
+.button path{
+stroke: var(--text-primary);
+transition: stroke 0.3s;
+}
+
+.button:hover{
+color: var(--text-inverse);
+background: var(--color-primary);
+}
+.button:hover path{
+stroke: var(--text-inverse);
+}
+
+/* ПОСИЛАННЯ ЗІ СТРІЛКОЮ */
+.arrow-link{
+   font-size: 18px;
+   line-height: 1.2;
+   display: inline-flex;
+   align-items: center;
+   gap: 12px;
+   transition: all 0.3s;
+}
+/* --- */
+.arrow-link__left{
+   flex-direction: row-reverse;
+}
+.arrow-link__left svg{
+   rotate: 180deg;
+}
+/* --- */
+
+.arrow-link path {
+   stroke: var(--text-default);
+   transition: stroke 0.3s;
+}
+.arrow-link:hover{
+   color: var(--text-primary);
+}
+.arrow-link:hover path {
+   stroke: var(--text-primary);
+}
+.arrow-link--color{
+   color: var(--text-primary);
+}
+.arrow-link--color path{
+   color: var(--text-primary);
+}
+.arrow-link--color:hover{
+   color: var(--text-default);
+}
+.arrow-link--color:hover path{
+   color: var(--text-default);
+}
+
+/* ЗАГОЛОВОК СЕКЦІЇ ІЗ СТРІЛКОЮ */
+.block-header {
+   display: flex;
+   flex-wrap: wrap;
+   align-items: center;
+   justify-content: space-between;
+   gap: 10px 20px;
+}
+.block-header__title {
+   font-size: 70px;
+   line-height: 1.1;
+   text-transform: uppercase;
+}
+.block-header__title span{
+   text-transform: none;
+   color: var(--text-primary);
+}
+.block-header__link {}
+
+@media (max-width: 1430px){
+   .block-header__title{
+      font-size: 60px;
+   }
+}
+@media (max-width: 768.98px){
+   .block-header__title{
+      font-size: 50px;
+   }
+}
+@media (max-width: 479px){
+   .block-header__title{
+      font-size: 44px;
+   }
+}
+
+/* СОЦІАЛЬНІ МЕРЕЖІ */
+.social {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   align-items: center;
+   gap: 10px 30px;
+   padding-bottom: 40px;
+}
+.social__link {
+   font-size: 14px;
+   line-height: 1.2;
+   text-transform: uppercase;
+   transition: all 0.3s;
+}
+.social__link:hover {
+   color: var(--text-primary);
+}
+
+
+
+
+
+

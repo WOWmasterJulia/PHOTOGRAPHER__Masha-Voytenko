@@ -1,0 +1,195 @@
+
+.exhibitions__block-header:not(:last-child) {
+   margin-bottom: 95px;
+}
+.exhibitions__item {
+   gap: 48px;
+   align-items: center;
+   display: grid;
+   grid-template-columns: 230px 1fr auto minmax(131px, auto);
+}
+.exhibitions__item:not(:last-child) {
+   border-bottom: 1px solid var(--border-default);
+   padding-bottom: 50px;
+   margin-bottom: 50px;
+}
+.item-exhibition__picture {
+   flex-shrink: 0;
+   overflow: hidden;
+   width: 230px;
+   aspect-ratio: 1;
+   align-self: flex-start;
+}
+.item-exhibition__image {
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+   transition: scale 0.5s;
+}
+.item-exhibition__image:hover {
+   scale: 1.04;
+}
+.item-exhibition__body {
+   align-items: center;
+   gap: 48px;
+}
+.item-exhibition__content {
+  flex: 1;
+  min-width: 0;
+}
+.item-exhibition__content > * {
+   margin-bottom: 8px;
+}
+.item-exhibition__place {
+   display: flex;
+   gap: 10px;
+   align-items: center;
+}
+.item-exhibition__place span{
+   display: flex;
+   gap: 10px;
+   align-items: center;
+}
+.item-exhibition__place span:not(:last-child)::after{
+   content: '';
+   width: 15px;
+   height: 1px;
+   background-color: var(--text-default);
+}
+.item-exhibition__title {
+   margin-bottom: 20px;
+   font-size: 40px;
+   text-transform: uppercase;
+   line-height: 1.1;
+}
+.item-exhibition__title span{
+   text-transform: none;
+   color: var(--text-primary);
+}
+.item-exhibition__link-title {
+   transition: color 0.3s;
+}
+.item-exhibition__link-title:hover {
+   color: var(--text-primary);
+}
+.item-exhibition__text {
+   line-height: 1.6;
+}
+.item-exhibition__text p:not(:last-child) {
+   margin-bottom: 10px;
+}
+.item-exhibition__content > *:last-child{
+   margin-bottom: 0px;
+
+}
+.item-exhibition__buy {
+   flex-shrink: 0;
+   margin-inline: 0;
+   padding-inline: 20px; 
+}
+.item-exhibition__date {
+   flex-shrink: 0;
+   font-size: 100px;
+   line-height: 1.1;
+   text-align: right;
+   color: var(--text-primary);
+}
+.item-exhibition__date small{
+   font-size: 30px;
+   display: block;
+}
+
+
+@media (max-width: 1430px) {
+   .exhibitions__block-header:not(:last-child) {
+      margin-bottom: 80px;
+   }
+   .exhibitions__item {
+      grid-template-columns: 230px 1fr auto minmax(104.25px, auto);
+   }
+   .exhibitions__item:not(:last-child) {
+      padding-bottom: 40px;
+      margin-bottom: 40px;
+   }
+   .item-exhibition__date {
+      font-size: 80px;
+   }
+   .item-exhibition__date small{
+      font-size: 26px;
+   }
+   .item-exhibition__title {
+      font-size: 30px;   
+   }
+}
+
+@media (min-width: 992px) {
+   .item-exhibition__body {
+      display: contents;
+   }
+}
+
+@media (max-width: 991.98px) {
+   .exhibitions__block-header:not(:last-child) {
+   margin-bottom: 50px;
+   }
+   .exhibitions__item {
+      grid-template-columns: 150px 1fr minmax(80px, auto);
+      gap: 30px;
+      align-items: flex-start;
+   }
+   .exhibitions__item:not(:last-child) {
+      padding-bottom: 35px;
+      margin-bottom: 35px;
+   }
+   .item-exhibition__picture {
+      width: 150px;
+   }
+   .item-exhibition__buy {
+      margin-top: 8px;
+   }
+   .item-exhibition__date {
+      font-size: 60px;
+   }
+   .item-exhibition__date small{
+      font-size: 20px;
+   }
+}
+@media (max-width: 767.98px) {
+   .exhibitions__block-header:not(:last-child) {
+      margin-bottom: 30px;
+   }
+   .exhibitions__item {
+      grid-template-columns: 150px 1fr minmax(60px, auto);
+      gap: 20px;
+   }
+   .item-exhibition__date {
+      font-size: 45px;
+   }
+   .item-exhibition__date small{
+      font-size: 14px;
+   }
+   .item-exhibition__title {
+      font-size: 24px; 
+      margin-bottom: 7px;  
+   }
+}
+@media (max-width: 550px) {
+   .exhibitions__item {
+      display: flex;
+      flex-wrap: wrap;
+      position: relative;
+   }
+   .item-exhibition__picture {
+      flex-grow: 1;
+   }
+   .item-exhibition__date {
+      color: var(--text-default);
+      font-size: 30px;
+      background-color: rgba(255, 255, 255, 0.5);
+      border-radius: 5px;
+      padding: 10px;
+      position: absolute;
+      top: 10px;
+      left: 10px;
+   }
+}

@@ -1,0 +1,107 @@
+.latest-works__block-header:not(:last-child) {
+   margin-bottom: 128px;
+}
+
+.latest-works__items {
+   display: flex;
+   gap: 10.559441%; /* 151/1430 */
+}
+.latest-works__column {
+   display: flex;
+   flex-direction: column;
+   row-gap: 128px;
+}
+.latest-works__column:first-child .item-works:nth-child(even) {
+   align-self: center;
+}
+.latest-works__column:last-child .item-works:nth-child(odd) {
+   align-self: flex-end;
+}
+.item-works__link {
+   transition: color 0.3s;
+}
+.item-works__link:hover {
+   color: var(--text-primary);
+}
+.item-works__link:hover .item-works__image{
+   scale: 1.01;
+}
+.item-works__title {
+   font-size: 30px;
+   line-height: 1.2;
+   text-transform: uppercase;
+}
+
+.item-works__title span {
+   text-transform: none;
+   color: var(--text-primary);
+}
+.item-works__title:not(:last-child){
+   margin-bottom: 12px;
+}
+.item-works__image {
+   transition: scale 0.3s;
+}
+.item-works__caption {
+   padding-top: 12px;
+   line-height: 1.6;
+}
+@media (max-width: 1430px) {
+   .latest-works__block-header:not(:last-child) {
+   margin-bottom: 80px;
+   }
+   .latest-works__column {
+      row-gap: 80px;
+   }
+}
+@media (max-width: 991.98px) {
+   .latest-works__block-header:not(:last-child) {
+   margin-bottom: 50px;
+   }
+   .latest-works__items {
+   gap: 5%; 
+   }
+   .item-works__title {
+      font-size: 26px;
+   }
+   .latest-works__column {
+      row-gap: 50px;
+   }
+}
+@media (max-width: 767.98px) {
+   .latest-works__block-header:not(:last-child) {
+   margin-bottom: 20px;
+   }
+   .item-works__title {
+      font-size: 20px;
+   }
+   .latest-works__column {
+      row-gap: 20px;
+   }
+}
+@media (max-width: 599.98px) {
+   .latest-works__items {
+      overflow: auto;
+      margin-inline: -15px;
+      padding-inline: 15px;
+   }
+   .latest-works__column {
+      flex-direction: row;
+      align-items: flex-start;
+      column-gap: 30px;
+   }
+   .item-works {
+      flex: 0 0 250px;
+   }
+}
+@media (min-width: 600px) {
+   .latest-works__column:first-child {
+      flex: 1 1 700px;
+   }
+   .latest-works__column:last-child {
+      flex: 1 1 550px;
+   }
+}
+
+
+

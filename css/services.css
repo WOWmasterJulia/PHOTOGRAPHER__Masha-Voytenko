@@ -1,0 +1,99 @@
+.services__container {
+   display: flex;
+   align-items: flex-start;
+   gap: 20px;
+   position: relative;
+}
+.services__title {
+   text-transform: uppercase;
+}
+.services__title span {
+   color: var(--text-primary);
+   text-transform: none;
+}
+.services__list {
+   flex: 1 1 auto;
+   counter-reset: item;
+}
+.services__item {
+   padding-left: 13.875%; /* 111/800 */
+   position: relative;
+}
+.services__item::before {
+   position: absolute;
+   top: 0;
+   left: 0;
+   counter-increment: item;
+   color: var(--text-primary);
+   font-size: 30px;
+   line-height: 1.2;
+   content: counter(item, decimal-leading-zero);
+}
+.services__item:not(:last-child) {
+   margin-bottom: 50px;
+   padding-bottom: 50px;
+   border-bottom: 1px solid var(--border-default);
+}
+.services__name {
+   font-size: 30px;
+   line-height: 1.2;
+   text-transform: uppercase;
+   transition: color 0.3s;
+}
+.services__name:not(:last-child) {
+   margin-bottom: 20px;
+}
+.services__name:hover {
+   color: var(--text-primary);
+}
+.services__description {
+   font-size: 18px;
+   line-height: 1.6;
+}
+.services__description p:not(:last-child) {
+   margin-bottom: 10px;
+}
+
+@media (max-width: 991.98px) {
+   .services__title {
+      top: 110px;
+   }
+   .services__item:not(:last-child) {
+   margin-bottom: 30px;
+   padding-bottom: 30px;
+   }
+   .services__name:not(:last-child) {
+   margin-bottom: 15px;
+   }
+}
+@media (max-width: 767.98px) {
+   .services__container {
+      flex-direction: column;
+   }
+   .services__title {
+      top: 60px;
+   }
+   .services__item::before {
+      font-size: 24px;
+   }
+   .services__name {
+      font-size: 24px;
+   }
+   .services__name:not(:last-child) {
+   margin-bottom: 10px;
+   }
+   .services__item:not(:last-child) {
+   margin-bottom: 20px;
+   padding-bottom: 20px;
+   }
+}
+@media (min-width: 767.98px) {
+   .services__title {
+      position: sticky;
+      top: 140px;
+      flex: 1 1 380px;
+   }
+   .services__container:has(.services__title) .services__list  {
+      flex: 1 1 800px;
+   }
+}

@@ -1,0 +1,114 @@
+.page {}
+/* .page__letswork {} */
+
+.letswork {
+   padding-block: 230px;
+}
+.letswork__container {
+   display: flex;
+   justify-content: center;
+}
+.letswork__link {
+   display: flex;
+   align-items: center;
+   gap: 100px;
+}
+.letswork__circle {
+   position: relative;
+   /* background-color: var(--text-primary); */
+   background: var(--color-primary);
+   border: none;
+   aspect-ratio: 1;
+   width: 200px;
+   flex-shrink: 0;
+   border-radius: 50%;
+   /* display: flex;
+   justify-content: center;
+   align-items: center; */
+   display: grid;
+   place-content: center;
+   text-align: center;
+   color: var(--text-inverse);
+   font-size: 24px;
+   text-transform: uppercase;
+   line-height: 1.2;
+}
+
+.letswork__circle::before {
+   content: '';
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 200px;
+   aspect-ratio: 1;
+   border-radius: 50%;
+   border: 1px solid var(--text-primary);
+   transition: all 0.3s;
+}
+.letswork__link:hover .letswork__circle::before {
+   width: 220px;
+   left: 10px;
+   top: -10px;
+}
+
+.letswork__title {
+   text-transform: uppercase;
+   font-size: 100px;
+   line-height: 1.1;
+}
+.letswork__title span {
+   color: var(--text-primary);
+   text-transform: none;
+}
+@media (max-width: 1430px){
+   .letswork {
+      padding-block: 150px;
+   }
+   .letswork__title {
+      font-size: 80px;
+   }
+}
+@media (max-width: 991.98px){
+   .letswork__link {
+      gap: 60px;
+   }
+   .letswork {
+      padding-block: 80px;
+   }
+   .letswork__title {
+      font-size: 60px;
+   }
+}
+@media (max-width: 737.98px){
+   .letswork {
+      padding-block: 50px;
+   }
+   .letswork__circle {
+      width: 160px;
+   }
+   .letswork__circle::before {
+      top: -10px;
+      left: 10px;
+      width: 180px;
+   }
+   .letswork__title {
+      font-size: 42px;
+   }
+}
+@media (max-width: 650px){
+   .letswork__circle {
+      width: 100px;
+      font-size: 16px;
+   }
+   .letswork__circle::before {
+      top: -5px;
+      left: 5px;
+      width: 110px;
+   }
+   .letswork__link {
+      gap: 30px;
+   }
+   .letswork__title {
+      font-size: 26px;
+   }
+}
